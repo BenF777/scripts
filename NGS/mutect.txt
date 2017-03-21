@@ -1,0 +1,6 @@
+java -jar ~/Bioinformatics/Tools/mutect-1.1.7.jar \
+-T MuTect \
+--input_file:tumor /mnt/files-bioseq/bioseq-temporary/ben/bam_hpx/15001181_S1_velona.bam \
+-S LENIENT \
+-R /home/benflies/Desktop/ucsc.hg19.fa \
+-vcf /mnt/files-bioseq/bioseq-temporary/ben/variants_mutect/15001181_mutect.vcf

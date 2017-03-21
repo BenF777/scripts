@@ -1,0 +1,20 @@
+java -jar /home/benflies/Bioinformatics/Tools/GenomeAnalysisTK.jar \
+   -T DepthOfCoverage \
+   -omitBaseOutput \
+   -omitLocusTable \
+   -R /home/benflies/sequencing/reference/hg19/ucsc.hg19.fa \
+   -I /home/benflies/Bioinformatics/NGS_Pipelines/pipeline_Norlux/NGS_DATA/161114-ARJLA_NorLux_2/out/bam/P13_aligned_w_RG.bam \
+   -L /home/benflies/Bioinformatics/NGS_Pipelines/pipeline_Norlux/scripts/bed/NPHD.bed \
+   -o /home/benflies/Desktop/coverage_testing.txt
+
+
+
+java -jar /home/benflies/Bioinformatics/Tools/picard-tools-2.5.0/picard.jar \
+    AddOrReplaceReadGroups \
+    INPUT=/home/benflies/Bioinformatics/NGS_Pipelines/pipeline_Norlux/NGS_DATA/161114-ARJLA_NorLux_2/out/bam/P13_aligned.bam \
+    OUTPUT=/home/benflies/Bioinformatics/NGS_Pipelines/pipeline_Norlux/NGS_DATA/161114-ARJLA_NorLux_2/out/bam/P13_aligned_w_RG.bam \
+    RGID=H0164.2H0164.2 \
+    RGLB=TST15 \
+    RGPL=illumina \
+    RGPU=H0164ALXX140820.2 \
+    RGSM=P13

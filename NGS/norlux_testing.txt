@@ -1,0 +1,71 @@
+java -jar ~/Bioinformatics/Tools/picard-tools-2.5.0/picard.jar MarkDuplicates INPUT=~/NGS_Data/Norlux/186PDX_S4.bam OUTPUT=~/NGS_Data/Norlux/186PDX_S4_dedup.bam METRICS_FILE=~/NGS_Data/Norlux/metrics.txt
+samtools index ~/NGS_Data/Norlux/186PDX_S4_dedup.bam ~/NGS_Data/Norlux/186PDX_S4_dedup.bam.bai
+samtools mpileup -u -f ~/Desktop/ucsc.hg19.fa /home/benflies/NGS_Data/Norlux/186PDX_S4_dedup.bam  | bcftools call -cv -V indels > /home/benflies/NGS_Data/Norlux/186PDX_S4_snps.vcf
+python /home/benflies/Bioinformatics/Tools/Platypus_0.8.1/Platypus.py callVariants --refFile ~/Desktop/ucsc.hg19.fa --bamFiles /home/benflies/NGS_Data/Norlux/186PDX_S4_dedup.bam --genIndels 1 --genSNPs 0 --output=/home/benflies/NGS_Data/Norlux/186PDX_S4_dedup_indels.vcf
+
+java -jar ~/Bioinformatics/Tools/picard-tools-2.5.0/picard.jar MarkDuplicates INPUT=~/NGS_Data/Norlux/341PDX_S8.bam OUTPUT=~/NGS_Data/Norlux/341PDX_S8_dedup.bam METRICS_FILE=~/NGS_Data/Norlux/metrics.txt
+samtools index ~/NGS_Data/Norlux/341PDX_S8_dedup.bam ~/NGS_Data/Norlux/341PDX_S8_dedup.bam.bai
+samtools mpileup -u -f ~/Desktop/ucsc.hg19.fa /home/benflies/NGS_Data/Norlux/341PDX_S8_dedup.bam  | bcftools call -cv -V indels > /home/benflies/NGS_Data/Norlux/341PDX_S8_snps.vcf
+python /home/benflies/Bioinformatics/Tools/Platypus_0.8.1/Platypus.py callVariants --refFile ~/Desktop/ucsc.hg19.fa --bamFiles /home/benflies/NGS_Data/Norlux/341PDX_S8_dedup.bam --genIndels 1 --genSNPs 0 --output=/home/benflies/NGS_Data/Norlux/341PDX_S8_dedup_indels.vcf
+
+java -jar ~/Bioinformatics/Tools/picard-tools-2.5.0/picard.jar MarkDuplicates INPUT=~/NGS_Data/Norlux/T304_S6.bam OUTPUT=~/NGS_Data/Norlux/T304_S6_dedup.bam METRICS_FILE=~/NGS_Data/Norlux/metrics.txt
+samtools index ~/NGS_Data/Norlux/T304_S6_dedup.bam ~/NGS_Data/Norlux/T304_S6_dedup.bam.bai
+samtools mpileup -u -f ~/Desktop/ucsc.hg19.fa /home/benflies/NGS_Data/Norlux/T304_S6_dedup.bam  | bcftools call -cv -V indels > /home/benflies/NGS_Data/Norlux/T304_S6_snps.vcf
+python /home/benflies/Bioinformatics/Tools/Platypus_0.8.1/Platypus.py callVariants --refFile ~/Desktop/ucsc.hg19.fa --bamFiles /home/benflies/NGS_Data/Norlux/T304_S6_dedup.bam --genIndels 1 --genSNPs 0 --output=/home/benflies/NGS_Data/Norlux/T304_S6_dedup_indels.vcf
+
+java -jar ~/Bioinformatics/Tools/picard-tools-2.5.0/picard.jar MarkDuplicates INPUT=~/NGS_Data/Norlux/T337_S2.bam OUTPUT=~/NGS_Data/Norlux/T337_S2_dedup.bam METRICS_FILE=~/NGS_Data/Norlux/metrics.txt
+samtools index ~/NGS_Data/Norlux/T337_S2_dedup.bam ~/NGS_Data/Norlux/T337_S2_dedup.bam.bai
+samtools mpileup -u -f ~/Desktop/ucsc.hg19.fa /home/benflies/NGS_Data/Norlux/T337_S2_dedup.bam  | bcftools call -cv -V indels > /home/benflies/NGS_Data/Norlux/T337_S2_snps.vcf
+python /home/benflies/Bioinformatics/Tools/Platypus_0.8.1/Platypus.py callVariants --refFile ~/Desktop/ucsc.hg19.fa --bamFiles /home/benflies/NGS_Data/Norlux/T337_S2_dedup.bam --genIndels 1 --genSNPs 0 --output=/home/benflies/NGS_Data/Norlux/T337_S2_dedup_indels.vcf
+
+java -jar ~/Bioinformatics/Tools/picard-tools-2.5.0/picard.jar MarkDuplicates INPUT=~/NGS_Data/Norlux/T346_S3.bam OUTPUT=~/NGS_Data/Norlux/T346_S3_dedup.bam METRICS_FILE=~/NGS_Data/Norlux/metrics.txt
+samtools index ~/NGS_Data/Norlux/T337_S2_dedup.bam ~/NGS_Data/Norlux/T346_S3_dedup.bam.bai
+samtools mpileup -u -f ~/Desktop/ucsc.hg19.fa /home/benflies/NGS_Data/Norlux/T346_S3_dedup.bam  | bcftools call -cv -V indels > /home/benflies/NGS_Data/Norlux/T346_S3_snps.vcf
+python /home/benflies/Bioinformatics/Tools/Platypus_0.8.1/Platypus.py callVariants --refFile ~/Desktop/ucsc.hg19.fa --bamFiles /home/benflies/NGS_Data/Norlux/T346_S3_dedup.bam --genIndels 1 --genSNPs 0 --output=/home/benflies/NGS_Data/Norlux/T346_S3_dedup_indels.vcf
+
+java -jar ~/Bioinformatics/Tools/picard-tools-2.5.0/picard.jar MarkDuplicates INPUT=~/NGS_Data/Norlux/T394_S7.bam OUTPUT=~/NGS_Data/Norlux/T394_S7_dedup.bam METRICS_FILE=~/NGS_Data/Norlux/metrics.txt
+samtools index ~/NGS_Data/Norlux/T394_S7_dedup.bam ~/NGS_Data/Norlux/T394_S7_dedup.bam.bai
+samtools mpileup -u -f ~/Desktop/ucsc.hg19.fa /home/benflies/NGS_Data/Norlux/T394_S7_dedup.bam  | bcftools call -cv -V indels > /home/benflies/NGS_Data/Norlux/T394_S7_snps.vcf
+python /home/benflies/Bioinformatics/Tools/Platypus_0.8.1/Platypus.py callVariants --refFile ~/Desktop/ucsc.hg19.fa --bamFiles /home/benflies/NGS_Data/Norlux/T394_S7_dedup.bam --genIndels 1 --genSNPs 0 --output=/home/benflies/NGS_Data/Norlux/T394_S7_dedup_indels.vcf
+
+java -jar ~/Bioinformatics/Tools/picard-tools-2.5.0/picard.jar MarkDuplicates INPUT=~/NGS_Data/Norlux/T407_S1.bam OUTPUT=~/NGS_Data/Norlux/T407_S1_dedup.bam METRICS_FILE=~/NGS_Data/Norlux/metrics.txt
+samtools index ~/NGS_Data/Norlux/T407_S1_dedup.bam ~/NGS_Data/Norlux/T407_S1_dedup.bam.bai
+samtools mpileup -u -f ~/Desktop/ucsc.hg19.fa /home/benflies/NGS_Data/Norlux/T407_S1_dedup.bam  | bcftools call -cv -V indels > /home/benflies/NGS_Data/Norlux/T407_S1_snps.vcf
+python /home/benflies/Bioinformatics/Tools/Platypus_0.8.1/Platypus.py callVariants --refFile ~/Desktop/ucsc.hg19.fa --bamFiles /home/benflies/NGS_Data/Norlux/T407_S1_dedup.bam --genIndels 1 --genSNPs 0 --output=/home/benflies/NGS_Data/Norlux/T407_S1_dedup_indels.vcf
+
+java -jar ~/Bioinformatics/Tools/picard-tools-2.5.0/picard.jar MarkDuplicates INPUT=~/NGS_Data/Norlux/T434_S5.bam OUTPUT=~/NGS_Data/Norlux/T434_S5_dedup.bam METRICS_FILE=~/NGS_Data/Norlux/metrics.txt
+samtools index ~/NGS_Data/Norlux/T434_S5_dedup.bam ~/NGS_Data/Norlux/T434_S5_dedup.bam.bai
+samtools mpileup -u -f ~/Desktop/ucsc.hg19.fa /home/benflies/NGS_Data/Norlux/T434_S5_dedup.bam  | bcftools call -cv -V indels > /home/benflies/NGS_Data/Norlux/T434_S5_snps.vcf
+python /home/benflies/Bioinformatics/Tools/Platypus_0.8.1/Platypus.py callVariants --refFile ~/Desktop/ucsc.hg19.fa --bamFiles /home/benflies/NGS_Data/Norlux/T434_S5_dedup.bam --genIndels 1 --genSNPs 0 --output=/home/benflies/NGS_Data/Norlux/T434_S5_dedup_indels.vcf
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+java -jar ~/Bioinformatics/Tools/picard-tools-2.5.0/picard.jar MarkDuplicates INPUT=~/NGS_Data/Norlux/186PDX_S4.bam OUTPUT=~/NGS_Data/Norlux/186PDX_S4_dedup.bam METRICS_FILE=~/NGS_Data/Norlux/metrics.txt
+
+
+library("VariantAnnotation")
+tabix.file <- TabixFile("/home/benflies/NGS_Data/Norlux/186PDX_S4_dedup.vcf.gz", yieldSize=10000)
+filterVcf(tabix.file, hg19, destination.file, prefilters=prefilters, filters=filters)
+
+isGermlinePrefilter <- function(x) {
+grepl("Germline", x, fixed = TRUE)
+}
+
+notInDbsnpPrefilter <- function(x) {
+!(grepl("dbsnp", x, fixed=TRUE))
+}
